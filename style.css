@@ -1,37 +1,155 @@
-/* Element selector */
+/* General page styling */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    color: #333;
 }
 
-/* Element selector */
-h1 {
+header {
     text-align: center;
-    font-size: 36px;
+    background-color: #2e7d32;
+    color: white;
+    padding: 25px;
 }
 
-/* Class selector */
-.expenses-section {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-/* ID selector */
-#add-expense {
-    background-color: #e8f5e9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-/* Element selector */
-input {
+header img {
     display: block;
+    margin: 0 auto 10px;
+}
+
+main {
     width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Sections */
+.add-expense-section,
+.expenses-section,
+.instructions,
+.multimedia {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Advanced selector: descendant selector */
+.add-expense-section input,
+.add-expense-section select {
     padding: 10px;
-    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Advanced selector: direct child selector */
+.add-expense-section > form {
+    margin-top: 15px;
+}
+
+/* Advanced selector: negation pseudo-class */
+input:not([type="submit"]) {
+    background-color: #fafafa;
+}
+
+/* Advanced selector: focus pseudo-class */
+input:focus,
+select:focus {
+    outline: 2px solid #2e7d32;
+    border-color: #2e7d32;
+}
+
+
+/* Button */
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+
+/* Expense table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Colored header row */
+thead {
+    background-color: #2e7d32;
+    color: white;
+}
+
+/* Advanced selector: position pseudo-class */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table row hover effect */
+tbody tr:hover {
+    background-color: #dff0d8;
+}
+
+
+/* Advanced selector: descendant selector */
+.expenses-section td {
+    font-size: 15px;
+}
+
+
+/* Details section */
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+
+/* Video */
+.multimedia {
+    text-align: center;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
 }
