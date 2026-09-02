@@ -1,155 +1,190 @@
 /* General page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
     margin: 0;
-    padding: 0;
+    background-color: #f4f6f8;
     color: #333;
 }
 
+/* Header */
 header {
-    text-align: center;
-    background-color: #2e7d32;
+    background-color: #2563eb;
     color: white;
     padding: 25px;
 }
 
-header img {
-    display: block;
-    margin: 0 auto 10px;
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
+.heading img {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.heading h1 {
+    margin: 0;
+}
+
+.heading p {
+    margin-bottom: 0;
+}
+
+/* Main sections */
 main {
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
 }
 
-/* Sections */
-.add-expense-section,
-.expenses-section,
-.instructions,
-.multimedia {
+section {
     background-color: white;
     padding: 25px;
     margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #2e7d32;
+    color: #2563eb;
 }
 
 
-/* Form styling */
-form {
+/* Add Expense Form */
+
+/* Negation pseudo-class */
+input:not([type="submit"]) {
+    box-sizing: border-box;
+}
+
+/* Direct child selector */
+.add-expense-section > form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-/* Advanced selector: descendant selector */
-.add-expense-section input,
-.add-expense-section select {
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 15px;
 }
 
-/* Advanced selector: direct child selector */
-.add-expense-section > form {
-    margin-top: 15px;
-}
-
-/* Advanced selector: negation pseudo-class */
-input:not([type="submit"]) {
-    background-color: #fafafa;
-}
-
-/* Advanced selector: focus pseudo-class */
+/* Focus selector */
 input:focus,
 select:focus {
-    outline: 2px solid #2e7d32;
-    border-color: #2e7d32;
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
 }
 
-
-/* Button */
 button {
-    background-color: #2e7d32;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #2563eb;
     color: white;
     border: none;
-    padding: 12px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #1b5e20;
+    background-color: #1d4ed8;
 }
 
 
-/* Expense table */
+/* Expense Table */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
 }
 
-th,
-td {
-    border: 1px solid #ccc;
+/* Descendant selector */
+.expenses-section td,
+.expenses-section th {
+    border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
 }
 
-/* Colored header row */
+/* Colored header */
 thead {
-    background-color: #2e7d32;
+    background-color: #2563eb;
     color: white;
 }
 
-/* Advanced selector: position pseudo-class */
+/* Alternating row colors */
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Table row hover effect */
+/* Hover effect */
 tbody tr:hover {
-    background-color: #dff0d8;
-}
-
-
-/* Advanced selector: descendant selector */
-.expenses-section td {
-    font-size: 15px;
+    background-color: #dbeafe;
 }
 
 
 /* Details section */
+
 summary {
-    cursor: pointer;
     font-weight: bold;
-    color: #2e7d32;
+    cursor: pointer;
+    color: #2563eb;
+}
+
+details p {
+    line-height: 1.6;
 }
 
 
-/* Video */
+/* Multimedia */
+
 .multimedia {
     text-align: center;
 }
 
 iframe {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 
 /* Footer */
+
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #1f2937;
     color: white;
-    padding: 15px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 220px;
+    }
 }

@@ -10,14 +10,17 @@
 <body>
 
     <header>
-        <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
-            alt="Budget Tracker logo"
-            width="70"
-        >
-
-        <h1>My Budget Tracker</h1>
-        <p>Track your expenses and manage your money wisely.</p>
+        <div class="heading">
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+                alt="Budget Tracker logo"
+                width="60"
+            >
+            <div>
+                <h1>My Budget Tracker</h1>
+                <p>Track your expenses and manage your money wisely.</p>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -26,13 +29,14 @@
         <section class="add-expense-section">
             <h2>Add Expense</h2>
 
-            <form>
+            <form id="expense-form">
+
                 <label for="expense-name">Expense Name:</label>
                 <input
                     type="text"
                     id="expense-name"
                     name="expense-name"
-                    placeholder="e.g. Groceries"
+                    placeholder="Enter expense name"
                 >
 
                 <label for="expense-amount">Amount:</label>
@@ -40,7 +44,7 @@
                     type="number"
                     id="expense-amount"
                     name="expense-amount"
-                    placeholder="e.g. 1500"
+                    placeholder="Enter amount"
                 >
 
                 <label for="expense-category">Category:</label>
@@ -48,11 +52,12 @@
                     id="expense-category"
                     name="expense-category"
                 >
-                    <option value="food">Food</option>
-                    <option value="transport">Transport</option>
-                    <option value="rent">Rent</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="other">Other</option>
+                    <option value="">Select category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Other">Other</option>
                 </select>
 
                 <label for="expense-date">Date:</label>
@@ -62,7 +67,10 @@
                     name="expense-date"
                 >
 
-                <button type="button">Add Expense</button>
+                <button type="button" id="add-expense-button">
+                    Add Expense
+                </button>
+
             </form>
         </section>
 
@@ -83,38 +91,38 @@
 
                 <tbody>
                     <tr>
-                        <td>Groceries</td>
-                        <td>KSh 3,500</td>
+                        <td>Lunch</td>
+                        <td>KSh 500</td>
                         <td>Food</td>
-                        <td>2026-08-18</td>
+                        <td>2026-08-25</td>
                     </tr>
 
                     <tr>
                         <td>Bus Fare</td>
-                        <td>KSh 800</td>
+                        <td>KSh 300</td>
                         <td>Transport</td>
-                        <td>2026-08-19</td>
+                        <td>2026-08-26</td>
                     </tr>
 
                     <tr>
                         <td>House Rent</td>
-                        <td>KSh 15,000</td>
+                        <td>KSh 10,000</td>
                         <td>Rent</td>
-                        <td>2026-08-20</td>
+                        <td>2026-08-27</td>
                     </tr>
 
                     <tr>
                         <td>Movie</td>
-                        <td>KSh 1,200</td>
+                        <td>KSh 800</td>
                         <td>Entertainment</td>
-                        <td>2026-08-21</td>
+                        <td>2026-08-28</td>
                     </tr>
 
                     <tr>
-                        <td>Phone Credit</td>
-                        <td>KSh 500</td>
+                        <td>Shopping</td>
+                        <td>KSh 1,500</td>
                         <td>Other</td>
-                        <td>2026-08-22</td>
+                        <td>2026-08-29</td>
                     </tr>
                 </tbody>
             </table>
@@ -125,11 +133,11 @@
         <section class="instructions">
             <details>
                 <summary>How to use this tracker</summary>
-
                 <p>
                     Enter the name of your expense, the amount you spent,
-                    choose a category, and select the date. Click the
-                    "Add Expense" button to submit the expense.
+                    select a category, and choose the date. Then click
+                    "Add Expense". The button will be connected to
+                    JavaScript in a future week.
                 </p>
             </details>
         </section>
@@ -143,7 +151,7 @@
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/HQzoZfc3GwQ"
-                title="Budgeting tips video"
+                title="Budgeting Tips Video"
                 frameborder="0"
                 allowfullscreen>
             </iframe>

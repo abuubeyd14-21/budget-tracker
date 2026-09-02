@@ -2,47 +2,53 @@
 
 ## Project Description
 
-This project is a Budget Tracker created using HTML and CSS.
+My Budget Tracker is a simple website that helps users record and view
+their expenses. The project was created using HTML and CSS.
 
-The purpose of the project is to allow users to record and view their expenses. The Week 2 version improves the Week 1 project by adding an expense table, an upgraded expense form, multimedia content, an interactive details section, and advanced CSS selectors.
+## Features
 
-## Files
-
-### index.html
-
-The `index.html` file contains the structure of the Budget Tracker.
-
-It includes:
-
-- The main heading and logo
-- An Add Expense form
-- Expense name, amount, category, and date inputs
-- A category dropdown with five options
-- An Add Expense button
-- An expense table containing sample expenses
-- A collapsible "How to use this tracker" section
-- An embedded budgeting video
-- A footer
-
-### style.css
-
-The `style.css` file controls the appearance of the Budget Tracker.
-
-It includes:
-
-- Page and section styling
-- Form styling
-- Table borders and spacing
-- Colored table headers
-- Alternating table row colors
+- Expense table with sample expense records
+- Add Expense form
+- Expense category dropdown
+- Expense date input
+- Budgeting tips video
+- Collapsible instructions section
 - Table row hover effects
-- Button hover effects
-- Input focus effects
-- Advanced CSS selectors
+- Responsive design
 
-## Advanced CSS Selectors Used
+## HTML Structure
 
-The project uses more than three advanced CSS selectors:
+### Header
+The header contains the Budget Tracker logo, title, and introduction.
+
+### Add Expense Form
+The form contains:
+- Expense name
+- Expense amount
+- Expense category
+- Expense date
+- Add Expense button
+
+### Expense Table
+The table displays:
+- Name
+- Amount
+- Category
+- Date
+
+The table uses `thead`, `tbody`, `tr`, `th`, and `td`.
+
+### Multimedia
+An image is displayed near the main heading and a YouTube video
+is embedded using an iframe.
+
+### Instructions
+The `details` and `summary` elements create a collapsible section
+that explains how to use the tracker.
+
+## CSS Selectors Used
+
+The project uses advanced CSS selectors including:
 
 1. Descendant selector:
    `.expenses-section td`
@@ -59,18 +65,15 @@ The project uses more than three advanced CSS selectors:
 5. Focus pseudo-class:
    `input:focus`
 
-## Multimedia
-
-The project includes:
-
-- An image using the `<img>` element with `src`, `alt`, and `width` attributes.
-- A YouTube video using an `<iframe>` with `width`, `height`, `title`, and `frameborder` attributes.
+6. Hover pseudo-class:
+   `tbody tr:hover`
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 
-## Author
+## Future Improvements
 
-Hassan Yussuf
+JavaScript will be added in a future week to make the Add Expense
+button functional and allow users to add expenses dynamically.
